@@ -42,7 +42,6 @@ contract ApplicationLedger {
         // Looping array and push into Application  
         for (uint i = 0; i < _companyInfo.length; i++) {
             applications.push(Application({
-                //from: msg.sender,
                 companyInfo:_companyInfo[i],
                 companyCategory:_companyCategory[i],
                 item:_item[i],
@@ -55,8 +54,6 @@ contract ApplicationLedger {
             applicationTypeTotals[_companyCategory[i]] += _quantity[i];
         }
 
-        // Emit the event
-        emit ApplicationsAdded(msg.sender, _companyInfo.length);
     }
 
     // Function to get the total quantity of a specific application type
