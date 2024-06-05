@@ -1,9 +1,10 @@
 // SPDX-License-Identifier: MIT
+//yg lama x support array
 pragma solidity ^0.8.0;
 
-contract TransactionLedger {
-    // Define a struct to represent a transaction
-    struct Transaction {
+contract ApplicationLedger {
+    //struct untuk application dari ETL
+    struct Application {
         string companyInfo;
         string companyCategory;
         string item;
@@ -12,17 +13,17 @@ contract TransactionLedger {
         string location;
     }
 
-    // Array to store all transactions
-    Transaction[] private transactions;
+    // simpan application dalam array
+    Application[] private applications;
 
-    // Mapping to store the total quantity of each transaction type
-    mapping(string => uint) private transactionTypeTotals;
+    // store quantity
+    mapping(string => uint) private applicationTypeTotals;
 
-    // Event to emit when new transactions are added
-    event TransactionsAdded(address indexed from, uint transactionCount);
+    // Event to emit when new applications are added
+    event ApplicationsAdded(address indexed from, uint applicationCount);
 
-    // Function to add multiple transactions in a batch
-    function addTransactions(
+    // Function to add multiple applications in a batch
+    function addApplications(
        
         string[] memory _companyInfo,
         string[] memory _companyCategory,
@@ -38,9 +39,9 @@ contract TransactionLedger {
                 _unitItem.length == _location.length, 
                 "Input arrays must have the same length");
 
-        // Loop through the input arrays and create new transactions
+        // Loop through the input arrays and create new applications
         for (uint i = 0; i < _companyInfo.length; i++) {
-            transactions.push(Transaction({
+            applications.push(Application({
                 //from: msg.sender,
                 companyInfo:_companyInfo[i],
                 companyCategory:_companyCategory[i],
@@ -50,33 +51,33 @@ contract TransactionLedger {
                 location:_location[i]
             }));
 
-            // Update the total quantity of the transaction type
-            transactionTypeTotals[_companyCategory[i]] += _quantity[i];
+            // Update the total quantity of the application type
+            applicationTypeTotals[_companyCategory[i]] += _quantity[i];
         }
 
         // Emit the event
-        emit TransactionsAdded(msg.sender, _companyInfo.length);
+        emit ApplicationsAdded(msg.sender, _companyInfo.length);
     }
 
-    // Function to get the total quantity of a specific transaction type
-    function getTotalQuantityByType(string memory _transactionType) public view returns (uint) {
-        return transactionTypeTotals[_transactionType];
+    // Function to get the total quantity of a specific application type
+    function getTotalQuantityByType(string memory _applicationType) public view returns (uint) {
+        return applicationTypeTotals[_applicationType];
     }
 
-    // Function to get the details of a transaction by index
-    function getTransaction(uint _index) public view returns (string memory companyInfo, string memory companyCategory, string memory item, uint64 quantity, string memory unitItem, string memory location) {
+    // Function to get the details of a application by index
+    function getApplication(uint _index) public view returns (string memory companyInfo, string memory companyCategory, string memory item, uint64 quantity, string memory unitItem, string memory location) {
         // Ensure the index is within bounds
-        require(_index < transactions.length, "Transaction index out of bounds");
+        require(_index < applications.length, "Application index out of bounds");
 
-        // Fetch the transaction
-        Transaction memory transaction = transactions[_index];
+        // Fetch the application
+        Application memory application = applications[_index];
 
-        // Return the transaction details
-        return (transaction.companyInfo, transaction.companyCategory, transaction.item, transaction.quantity, transaction.unitItem, transaction.location);
+        // Return the application details
+        return (application.companyInfo, application.companyCategory, application.item, application.quantity, application.unitItem, application.location);
     }
 
-    // Function to get the total number of transactions
-    function getTransactionCount() public view returns (uint) {
-        return transactions.length;
+    // Function to get the total number of applications
+    function getApplicationCount() public view returns (uint) {
+        return applications.length;
     }
 }
