@@ -16,13 +16,13 @@ contract ApplicationLedger {
     // simpan application dalam array
     Application[] private applications;
 
-    // store quantity
+    // store jumlah application
     mapping(string => uint) private applicationTypeTotals;
 
-    // Event to emit when new applications are added
+    // trigger event when new application coming 
     event ApplicationsAdded(address indexed from, uint applicationCount);
 
-    // Function to add multiple applications in a batch
+    //  add multiple applications in a batch
     function addApplications(
        
         string[] memory _companyInfo,
@@ -33,13 +33,13 @@ contract ApplicationLedger {
         string[] memory _location
 
     ) public {
-        // Ensure that all input arrays have the same length
+        // validate array length
         require(_companyInfo.length == _companyCategory.length && 
                 _item.length == _quantity.length && 
                 _unitItem.length == _location.length, 
                 "Input arrays must have the same length");
 
-        // Loop through the input arrays and create new applications
+        // Looping array and push into Application  
         for (uint i = 0; i < _companyInfo.length; i++) {
             applications.push(Application({
                 //from: msg.sender,
@@ -60,8 +60,8 @@ contract ApplicationLedger {
     }
 
     // Function to get the total quantity of a specific application type
-    function getTotalQuantityByType(string memory _applicationType) public view returns (uint) {
-        return applicationTypeTotals[_applicationType];
+    function getTotalQuantityByCategory(string memory _companyCategory) public view returns (uint) {
+        return applicationTypeTotals[_companyCategory];
     }
 
     // Function to get the details of a application by index

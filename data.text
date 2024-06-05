@@ -4,7 +4,6 @@
 //"companyCategory"
 ["Retailer","Retailer","Manufacturer","Wholesaler","Wholesaler","Wholesaler","Wholesaler","Wholesaler","Manufacturer","Manufacturer","Wholesaler","Retailer","Retailer","Retailer","Retailer","Retailer","Retailer","Retailer","Retailer","Retailer","Retailer","Wholesaler","Wholesaler","Retailer","Retailer","Wholesaler","Retailer","Retailer","Retailer","Wholesaler","Wholesaler","Wholesaler","Wholesaler","Manufacturer","Retailer","Manufacturer","Retailer","Wholesaler","Wholesaler"]
 
-
 //"item"
 ["Tepung Gandum","Tepung Gandum","Tepung Gandum","Tepung Gandum","Tepung Gandum","Tepung Gandum","Tepung Gandum","Tepung Gandum","Tepung Gandum","Tepung Gandum","Tepung Gandum","Tepung Gandum","Tepung Gandum","Tepung Gandum","Tepung Gandum","Tepung Gandum","Tepung Gandum","Tepung Gandum","Tepung Gandum","Tepung Gandum","Tepung Gandum","Tepung Gandum","Tepung Gandum","Tepung Gandum","Tepung Gandum","Tepung Gandum","Tepung Gandum","Tepung Gandum","Tepung Gandum","Tepung Gandum","Tepung Gandum","Tepung Gandum","Tepung Gandum","Tepung Gandum","Tepung Gandum","Tepung Gandum","Tepung Gandum","Tepung Gandum","Tepung Gandum"]
 
@@ -19,3 +18,22 @@
 
 //one line sini
 '_companyInfo' : '["809349-P|Acme Premier Sdn. Bhd.","456184-U|Aic Ingredients Sdn. Bhd.","574241-A|Be Natural Malaysia Sdn. Bhd.","603679-W|Bidara Flour Sdn. Bhd.","1181165-K|Bidara Rice Sdn. Bhd.","1108277-W|Bwy Holdings  Sdn. Bhd.","447535-V|Country Farms Sdn. Bhd.","683750-V|Eco Action Sdn Bhd","781325-A|Eminentwin Corporation (m) Sdn. Bhd.","620801106305|Erti Jayamega Sdn Bhd","27975-H|Euro Chemo-pharma Sdn. Bhd.","384539-H|Everprosper Food Industries Sdn. Bhd.","858852-K|Faiza Food Industries Sdn. Bhd.","185911-P|Ffm Grains & Mills Sdn. Bhd.","425068-P|Fmc Greenland Sdn. Bhd.","1251211-H|Great Neptune Holdings Sdn. Bhd.","454299-W|Health Paradise Sdn. Bhd.","643728-W|Hegner Asiaconnect (malaysia) Sdn. Bhd.","SA0505690-T|Ikhwan Industry Enterprise","514291-w|Jumbo Flour Sdn. Bhd.","750703-U|Kt Impex Sdn Bhd","1165299-X|Le Tamelier Sdn. Bhd.","794470-T|Malindo Exim Sdn Bhd","898182-T|Marubishi Ingredients & Equipments (m) Sdn. Bhd.","755903-U|Matahari Sdn. Bhd.","1062465-W|Mega Flour Sdn. Bhd.","1203421-T|Mitsuyado (malaysia) Sdn. Bhd.","1315642-K|Navdeep Nijjar Global Management Sdn. Bhd.","317371-A|Prestasi Flour Mill (m) Sdn. Bhd.","1149376-X|Prestige One Suppliers (m) Sdn. Bhd.","521422-K|Radiant Code Sdn. Bhd.","951143-W|Sanae Food Sdn. Bhd.","164320-h|Seberang Flour Mill Sdn. Bhd.","1221277-V|Sternmaid Asia Pacific  Sdn. Bhd.","1219557-k|Sunshine Bread Sdn Bhd","709880-D|Tehmag Foods Corporation Sdn. Bhd.","290508-V|Uniraw Dairies & Food Sdn. Bhd.","25143-H|Vit Makanan (kuala Lumpur) Sdn Bhd","720181-U|Zenosure Sdn. Bhd."]'
+
+
+//company
+["809349-P|Acme Premier Sdn. Bhd.","456184-U|Aic Ingredients Sdn. Bhd.","574241-A|Be Natural Malaysia Sdn. Bhd."]
+
+//"companyCategory"
+["Retailer","Retailer"]
+
+//"item"
+["Tepung Gandum","Tepung Gandum"]
+
+//"quantity"
+[460000,30000]
+
+//"unitItem"
+["Metric Ton","Metric Ton"]
+
+//"location"
+["Sibu|Sarawak","Shah Alam|Selangor"]
